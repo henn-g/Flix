@@ -5,12 +5,11 @@
 //  Created by Henry Guerra on 2/4/18.
 //  Copyright © 2018 FREECODE. All rights reserved.
 //
-
 import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
-
+  
   @IBOutlet weak var tableView: UITableView!
   var movies: [[String: Any]] = []
   var refreshControl: UIRefreshControl!
@@ -50,7 +49,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     task.resume()
   }
-
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return movies.count
   }
@@ -59,14 +58,16 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     let movie = movies[indexPath.row]
     let title = movie["original_title"] as! String
-    let overview = movie["overview"] as! String 
+    let overview = movie["overview"] as! String
     
     
     
     
     if let imagePathString = movie["poster_path"] as? String {
+      
       let baseURLString = "https://image.tmdb.org/t/p/w500"
       let posterURL = URL(string: baseURLString + imagePathString)
+      print(posterURL!)
       cell.posterImageView.af_setImage(withURL: posterURL!)
     } else {
       cell.posterImageView.image = nil
@@ -78,21 +79,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     return cell
   }
   
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let cell = sender as! UITableViewCell
-    if let indexPath = tableView.indexPath(for: cell) {
-      let movie = movies[indexPath.row]
-      let detailViewController = segue.destination as! DataViewController
-      detailViewController.movie = movie
-    }
-  }
-  
-  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
-
+  
 }
