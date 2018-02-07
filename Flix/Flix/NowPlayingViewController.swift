@@ -21,8 +21,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
+    
     tableView.insertSubview(refreshControl, at: 0)
     tableView.dataSource = self
+    self.tableView.rowHeight = 200
     fetchMovies()
   }
   
@@ -58,15 +60,22 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     let movie = movies[indexPath.row]
     let title = movie["original_title"] as! String
     let overview = movie["overview"] as! String 
+    
+    
+    
+    
+    if let imagePathString = movie["poster_path"] as? String {
+      
+      let baseURLString = "https://image.tmdb.org/t/p/w500"
+      let posterURL = URL(string: baseURLString + imagePathString)
+      print(posterURL!)
+      cell.posterImageView.af_setImage(withURL: posterURL!)
+    } else {
+      cell.posterImageView.image = nil
+    }
+    
     cell.titleLabel.text = title
     cell.overviewLabel.text = overview
-    
-    
-    let imagePathString = movie["poster_path"] as! String
-    let baseURLString = "https://image.tmdb.org/t/p/w500"
-    
-    let posterURL = URL(string: baseURLString + imagePathString)!
-    cell.posterImageView.af_setImage(withURL: posterURL)
     
     return cell
   }

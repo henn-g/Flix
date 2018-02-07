@@ -30,10 +30,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPl-S7-9Pc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="221"/>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PP7-xl-By8">
+                                                    <rect key="frame" x="185" y="44" width="37" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                    <color key="color" red="0.5788941062176165" green="0.5788941062176165" blue="0.5788941062176165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1al-2l-mJe">
                                                     <rect key="frame" x="155" y="58" width="205" height="163"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,11 +49,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPl-S7-9Pc">
+                                                    <rect key="frame" x="0.0" y="10" width="147" height="221"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageView" destination="XPl-S7-9Pc" id="eN8-Xv-q3k"/>
                                             <outlet property="overviewLabel" destination="1al-2l-mJe" id="8ye-fh-cTw"/>
+                                            <outlet property="posterImageView" destination="XPl-S7-9Pc" id="EUY-sW-3Cu"/>
                                             <outlet property="titleLabel" destination="SQV-Ok-mB2" id="Spe-bd-ktU"/>
                                         </connections>
                                     </tableViewCell>
