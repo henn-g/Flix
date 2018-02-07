@@ -65,10 +65,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     
     if let imagePathString = movie["poster_path"] as? String {
-      
       let baseURLString = "https://image.tmdb.org/t/p/w500"
       let posterURL = URL(string: baseURLString + imagePathString)
-      print(posterURL!)
       cell.posterImageView.af_setImage(withURL: posterURL!)
     } else {
       cell.posterImageView.image = nil
@@ -79,6 +77,17 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     return cell
   }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let cell = sender as! UITableViewCell
+    if let indexPath = tableView.indexPath(for: cell) {
+      let movie = movies[indexPath.row]
+      let detailViewController = segue.destination as! DataViewController
+      detailViewController.movie = movie
+    }
+  }
+  
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
