@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="-18" y="-271"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="504-g4-mdR">
             <objects>
-                <viewController id="wVN-sa-Y85" sceneMemberID="viewController">
+                <viewController id="wVN-sa-Y85" customClass="DetailViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6M7-4c-2Q3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,6 +119,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c1U-es-x4m"/>
                     </view>
+                    <connections>
+                        <outlet property="backdropImageView" destination="1HI-eZ-beL" id="ieD-1Z-zC4"/>
+                        <outlet property="overviewLabel" destination="mzs-XR-Ldz" id="rjy-47-fEj"/>
+                        <outlet property="posterImageView" destination="Xy9-v5-frE" id="7GD-tF-Z0Y"/>
+                        <outlet property="releaseDateLabel" destination="wna-1H-o5t" id="Szy-6O-V1v"/>
+                        <outlet property="titleLabel" destination="gpR-Mp-V7Z" id="X4R-Z7-8h5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwo-gc-Y12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
