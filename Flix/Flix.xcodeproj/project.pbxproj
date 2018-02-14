@@ -139,6 +139,8 @@
 		A0361A1C2027CABF00D681D8 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
+				A0A6FC1520341E350052AAFB /* Views */,
+				A0A6FC1420341E250052AAFB /* ViewControllers */,
 				A0361A4B2028242400D681D8 /* NowPlayingViewController.swift */,
 				A0361A4D20283B6400D681D8 /* MovieCell.swift */,
 				A0361A1D2027CABF00D681D8 /* AppDelegate.swift */,
@@ -166,6 +168,20 @@
 				A0361A3F2027CABF00D681D8 /* Info.plist */,
 			);
 			path = FlixUITests;
+			sourceTree = "<group>";
+		};
+		A0A6FC1420341E250052AAFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0A6FC1520341E350052AAFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
