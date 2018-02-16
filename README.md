@@ -1,26 +1,21 @@
-# Project 1 - *Name of App Here*
+# Lab 3 - *Auto Constraints*
 
-**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [ ] User sees app icon in home screen and styled launch screen (+1pt)
-- [ ] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
-- [ ] User can "Pull to refresh" the movie list (+2pt)
-- [ ] User sees a loading state while waiting for the movies to load (+2pt)
+- The following screens use AutoLayout to adapt to various orientations and screen sizes
+   - [x] Movie feed view (+3pt)
+   - [x] Detail view (+2pt)
 
 The following **stretch** user stories are implemented:
 
-- [ ] User sees an alert when there's a networking error (+1pt)
-- [ ] User can search for a movie (+3pt)
-- [ ] While poster is being fetched, user see's a placeholder image (+1pt)
-- [ ] User sees image transition for images coming from network, not when it is loaded from cache (+1pt)
-- [ ] Customize the selection effect of the cell (+1pt)
-- [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete (+2pt)
+- [ ] Dynamic Height Cells (+1)
+- [ ] Collection View AutoLayout (+2)
 
 The following **additional** user stories are implemented:
 
@@ -41,11 +36,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Did not have time to figure out why my constraints where not working the way that I intended. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Henry Guerra]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
